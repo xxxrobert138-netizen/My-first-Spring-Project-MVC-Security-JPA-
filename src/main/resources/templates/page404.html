@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>404 - Страница не найдена</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap');
+
+        body {
+          margin: 0;
+          height: 100vh;
+          background: #f0f0f3;
+          font-family: 'Roboto', sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #333;
+        }
+
+        .container {
+          text-align: center;
+          max-width: 400px;
+          padding: 20px;
+          background: white;
+          box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+          border-radius: 15px;
+        }
+
+        .error-code {
+          font-family: 'Montserrat', sans-serif;
+          font-size: 96px;
+          font-weight: 700;
+          color: #ff6b6b;
+          margin: 0;
+        }
+
+        h1 {
+          margin: 10px 0 15px;
+          font-weight: 700;
+          font-size: 24px;
+          color: #222;
+        }
+
+        p {
+          font-size: 16px;
+          margin-bottom: 30px;
+          color: #666;
+        }
+
+        a.button {
+          display: inline-block;
+          padding: 12px 30px;
+          background-color: #ff6b6b;
+          color: white;
+          text-decoration: none;
+          font-weight: 700;
+          border-radius: 50px;
+          transition: background-color 0.3s ease;
+        }
+
+        a.button:hover {
+          background-color: #ff4b4b;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="error-code">404</div>
+    <h1>Страница не найдена</h1>
+    <p>Извините, но страница, которую вы ищете, не существует или была удалена.</p>
+    <a href="/" class="button">Вернуться на главную</a>
+</div>
+</body>
+</html>

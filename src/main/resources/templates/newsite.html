@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Космос</title>
+    <!-- Можно подключить шрифт -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+    <style>
+        body {
+          margin: 0;
+          height: 100vh;
+          font-family: 'Orbitron', sans-serif;
+          background-color: #000010;
+          overflow: hidden;
+          position: relative;
+        }
+
+        /* Звёздное небо с анимацией мерцания */
+        .stars {
+          position: absolute;
+          top: 0; left: 0;
+          width: 100%; height: 100%;
+          background: transparent;
+          box-shadow:
+            50px 60px 2px #ffffff55,
+            150px 120px 2px #ffffff88,
+            250px 80px 1.5px #ffffff33,
+            350px 200px 2px #ffffff88,
+            450px 150px 1.5px #ffffff55,
+            550px 70px 2px #ffffff88,
+            650px 90px 2px #ffffff77,
+            750px 130px 1.5px #ffffff88,
+            850px 60px 2px #ffffff55,
+            950px 100px 1.5px #ffffff88;
+          animation: twinkle 4s infinite alternate;
+        }
+
+        @keyframes twinkle {
+          from {opacity: 0.8;}
+          to {opacity: 1;}
+        }
+
+        /* Главный контейнер */
+        .container {
+          position: relative;
+          z-index: 1;
+          text-align: center;
+          padding-top: 50px;
+        }
+
+        h1 {
+          font-size: 4rem;
+          color: #00ffff;
+          text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+          margin: 0 20px 20px;
+        }
+
+        p {
+          font-size: 1.3rem;
+          max-width: 700px;
+          margin: 0 auto 40px;
+          color: #ffffffcc;
+          line-height: 1.5;
+        }
+
+        /* Кнопка */
+        .btn {
+          display: inline-block;
+          padding: 15px 35px;
+          color: #00ffff;
+          border: 2px solid #00ffff;
+          border-radius: 40px;
+          background: transparent;
+          font-weight: bold;
+          font-size: 1.2rem;
+          cursor: pointer;
+          text-transform: uppercase;
+          box-shadow: 0 0 15px #00ffff55;
+          transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+          background: #00ffff;
+          color: #000010;
+          box-shadow: 0 0 30px #00ffff;
+        }
+
+        /* Картинка Марса */
+        .mars-img {
+          margin: 50px auto 0;
+          width: 300px;
+          height: 300px;
+          background-image: url('https://images.unsplash.com/photo-1554478168-9b6f4f23ee9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+          background-size: cover;
+          background-position: center;
+          border-radius: 50%;
+          box-shadow: 0 0 30px #ff0000aa, inset 0 0 10px #ffffff66;
+          animation: rotate 30s linear infinite;
+        }
+
+        @keyframes rotate {
+          from {transform: rotate(0deg);}
+          to {transform: rotate(360deg);}
+        }
+
+        /* Добавим эффект небесной анимации для космоса в фоне */
+        .space-background {
+          position: absolute;
+          top:0; left:0;
+          width: 100%; height: 100%;
+          background: radial-gradient(ellipse at bottom, #000010 0%, #000000 100%);
+          z-index: 0;
+          background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'); /* создает эффект космоса */
+          background-size: cover;
+          opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Фон звёзд -->
+<div class="stars"></div>
+
+<!-- Космический фон (можно заменить или убрать, чтобы было лучше) -->
+<div class="space-background"></div>
+
+<div class="container">
+    <h1>КОСМОС</h1>
+    <p>Погрузись в захватывающий мир Вселенной, исследуй планеты, звезды и тайны галактик. Добро пожаловать в космическое путешествие!</p>
+    <button class="btn">Исследовать</button>
+
+    <!-- Картинка Марса -->
+    <div class="mars-img"></div>
+</div>
+
+</body>
+</html>
