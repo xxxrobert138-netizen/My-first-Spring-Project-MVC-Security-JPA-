@@ -23,18 +23,6 @@ public class HomeController {
         return "home";
     }
 
-    @GetMapping("/about")
-    public String getMyStory() {
-        System.out.println("about");
-        return "about";
-    }
-
-    @GetMapping("/video")
-    public String getVideo() {
-        System.out.println("video");
-        return "video";
-    }
-
     @GetMapping("/signin")
     public String getLoginPage() {
         return "signin";
@@ -43,12 +31,6 @@ public class HomeController {
     @GetMapping("/signup")
     public String getRegisterPage() {
         return "signup";
-    }
-
-    @GetMapping("/new")
-    public String getNewPage() {
-        ConsoleHelper.printInformation("User enter to page \"new\"", ConsoleHelper.MessageType.MESSAGETOSERVER);
-        return "newsite";
     }
 
     @GetMapping("/tochat")
